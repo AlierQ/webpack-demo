@@ -7,7 +7,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build":"rm -rf dist && webpack"
+    "build": "rm -rf dist && webpack"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "html-webpack-plugin": "4"
+  }
 }
