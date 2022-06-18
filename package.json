@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "css-loader": "5",
+    "mini-css-extract-plugin": "1.0.0",
     "style-loader": "2",
     "webpack": "4",
     "webpack-cli": "3",
@@ -10,7 +11,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && webpack",
+    "build": "rm -rf dist && webpack --config webpack.config.prod.js",
     "start": "webpack-dev-server"
   },
   "license": "MIT",
