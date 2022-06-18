@@ -1,8 +1,11 @@
 {
   "devDependencies": {
     "css-loader": "5",
+    "less-loader": "6",
     "mini-css-extract-plugin": "1.0.0",
     "style-loader": "2",
+    "stylus": "^0.58.1",
+    "stylus-loader": "3",
     "webpack": "4",
     "webpack-cli": "3",
     "webpack-dev-server": "3.9.0"
@@ -16,6 +19,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "html-webpack-plugin": "4"
+    "dart-sass": "^1.25.0",
+    "html-webpack-plugin": "4",
+    "sass-loader": "7"
   }
 }

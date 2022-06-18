@@ -19,4 +19,36 @@ module.exports = {
             template: 'assets/test.html'
         }),
     ],
+    module: {
+        rules: [
+            // scss
+            {
+                test: /\.scss$/i,
+                use: [
+                    // 将 JS 字符串生成为 style 节点
+                    'style-loader',
+                    // 将 CSS 转化成 CommonJS 模块
+                    'css-loader',
+                    // 将 Sass 编译成 CSS
+                    // 使用dart-sass
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            implementation:require('dart-sass')
+                        }
+                    }
+                ],
+            },
+            // less
+            {
+                test: /\.less$/i,
+                loader: ['style-loader','css-loader','less-loader']
+            },
+            // stylus
+            {
+                test: /\.styl$/,
+                loader: ['style-loader','css-loader','stylus-loader'] // 将 Stylus 文件编译为 CSS
+            },
+        ],
+    }
 };
