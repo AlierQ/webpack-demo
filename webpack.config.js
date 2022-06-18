@@ -19,6 +19,14 @@ module.exports = {
             template: 'assets/test.html'
         })
     ],
+    devtool: 'inline-source-map',
+    // webpack-dev-server
+    devServer: {
+        contentBase: './dist'
+    },
+    optimization: {
+        runtimeChunk: 'single',
+    },
     module:{
         rules: [
             {
