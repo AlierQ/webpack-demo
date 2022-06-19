@@ -13,3 +13,15 @@ div.innerHTML = `
 `
 console.log('hi1')
 console.log(x)
+
+
+const button = document.createElement('button')
+button.innerText = '懒加载'
+button.onclick = ()=>{
+    const lazyPromise = import('./y') // 懒加载js，用到再加载
+    lazyPromise.then((module)=>{
+        const fn = module.default
+        fn()
+    })
+}
+div.appendChild(button)
