@@ -49,6 +49,11 @@ module.exports = {
                 test: /\.styl$/,
                 loader: ['style-loader','css-loader','stylus-loader'] // 将 Stylus 文件编译为 CSS
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                // type: 'asset/resource',// @4好像不支持
+                use:['file-loader']
+            },
         ],
     }
 };
