@@ -8,6 +8,10 @@ module.exports = {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
     },
+    // 控制代码压缩，生产的时候尽量开启
+    optimization: {
+        minimize: false
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: "我是默认生成的index.html"
