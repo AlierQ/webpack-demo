@@ -10,7 +10,7 @@ module.exports = {
     },
     // 控制代码压缩，生产的时候尽量开启
     optimization: {
-        minimize: false
+        minimize: true
     },
     plugins: [
         new HtmlWebpackPlugin({
